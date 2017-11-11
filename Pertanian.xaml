@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ZakatApp.Pertanian">
+	<ContentPage.Content>
+		<ScrollView>
+		<StackLayout Padding="20">
+			<StackLayout>
+				<Label  FontAttributes="Bold">Syarat Zakat Pertanian</Label>
+				<Label FontSize="14">1. Mencapai nishab 653 kg gabah atau 520 kg jika yang dihasilkan adalah makanan pokok</Label>
+				<Label FontSize="14">2. Jika selain makanan pokok, maka nishabnya disamakan dengan makanan pokok paling umum di sebuah daerah.</Label>
+				<Label FontSize="14">3. Kadar zakat apabila diairi dengan air hujan, sungai, atau mata air, maka 10 %, Jika Irigasi 5%</Label>
+
+			</StackLayout>
+			<Label FontAttributes="Bold"  Margin="0, 20, 15, 5">Hitung Zakat Pertanian</Label>
+			<StackLayout Margin="0, 20, 15, 5">
+				<Entry x:Name="JumlahPanen" Placeholder="Jumlah Hasil Panen " />
+				<Entry x:Name="HargaJual" Placeholder="Harga Jual" />
+				<Label TextColor="Silver" Text="Apakah Menggunakan Irigasi ?" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" />
+       			<Switch IsToggled="False" Toggled="Handle_Toggled"/>
+				<Label Text="Pilih" x:Name="Irigasi"></Label>
+				<Button Text="Hitung" BackgroundColor="Silver" Clicked="OnHitung"></Button>
+			</StackLayout>
+			<StackLayout Margin="0, 20, 15, 5">
+				<Label Text="Zakat Pertanian Anda"/>
+				<Label x:Name="JumlahZakat" Text="10000" FontSize="50"/>
+			</StackLayout>
+		</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
+
+
